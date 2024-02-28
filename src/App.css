@@ -1,5 +1,6 @@
 .App {
-  text-align: center;
+  
+  height: 100vh;
 }
 
 .App-logo {
@@ -35,4 +36,34 @@
   to {
     transform: rotate(360deg);
   }
+}
+.light-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.dark-mode {
+  background-color: #222222;
+  color: #ffffff;
+}
+.toggle{
+  display: flex !important;
+  padding: 10px;
+  width: 50%;
+  margin: auto;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+.toggle input{
+  cursor: pointer;
+}
+.active{
+  color: #fff;
+  background: #000000;
+  border-radius: 10px;
+}
+.btn-container{
+  display: flex;
+  justify-content: center;
 }

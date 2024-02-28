@@ -11,3 +11,37 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.container {
+  width: 80%;
+  margin: auto;
+}
+th{
+  cursor: pointer;
+}
+span{
+  margin: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+.pages{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.download-btn{
+  background: green;
+  padding: 10px;
+  border: none;
+  color: #fff;
+  border-radius: 10px;
+  font-weight: 700;
+  margin: auto;
+}
+.page-numbers{
+  width: 80%;
+  overflow: auto;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}

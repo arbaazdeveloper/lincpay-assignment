@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+
+import { useState } from 'react';
 import './App.css';
+import DataTable from './DataTable';
 
 function App() {
+  const [isDarkMode, setDarkMode] = useState(false);
+
+  const toggleDarkMode = () => {
+    setDarkMode(!isDarkMode);
+  };
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={`App ${isDarkMode ? 'dark-mode' : 'light-mode'}`}>
+      <div className="form-check form-switch toggle">
+        <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked={isDarkMode} onChange={toggleDarkMode} />
+        <h1>Change Theme</h1>
+        
+      </div>
+      <DataTable dark={isDarkMode}/>
     </div>
   );
 }
